@@ -24,6 +24,6 @@ public class Constantes {
         /**
 	 * Campo PASSWORD_SMTP de tipo String.
 	 */
-        public static final String PASSWORD_SMTP = "8M4r104l4n7";
+        public static final String PASSWORD_SMTP = "M4r10r48.g";
 
 }

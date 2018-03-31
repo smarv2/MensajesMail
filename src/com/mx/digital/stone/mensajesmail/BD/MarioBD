@@ -1,0 +1,2 @@
+DROP TABLE mensajes_mail;
+CREATE TABLE mensajes_mail (idMensajesMail int NOT NULL AUTO_INCREMENT, destinatarios varchar(255) COLLATE utf8_unicode_ci NOT NULL, asunto varchar(255) COLLATE utf8_unicode_ci NOT NULL, adjuntos varchar(255) COLLATE utf8_unicode_ci, mensaje varchar(255) COLLATE utf8_unicode_ci NOT NULL, fechaRegistro datetime NOT NULL, fechaEnvio datetime, enviado smallint DEFAULT '0' NOT NULL, PRIMARY KEY (idMensajesMail)) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -37,11 +37,11 @@ public class EnvioMailFacade {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.host", "mail.digitalstonemx.com");
+        props.put("mail.smtp.port", "26");
         
         //Variables de conexion;
-        final String Username = "smarv2@gmail.com";
+        final String Username = "robot@digitalstonemx.com";
         final String PassWord = Constantes.PASSWORD_SMTP;
 
         Session session = Session.getInstance(props,
@@ -55,11 +55,14 @@ public class EnvioMailFacade {
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(Username));
+            message.setFrom(new InternetAddress("mario.ramirezs@digitalstonemx.com"));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(To));
+            //message.setFileName("C:\\applogs\\logMensajesMailBatch.log");
             message.setSubject(Subject);
+            
             message.setText(Mensage);
+            message.setReplyTo(InternetAddress.parse("contacto@digitalstonemx.com"));
 
             Transport.send(message);
             LOG.info("mensaje enviado.");

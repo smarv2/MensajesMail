@@ -58,7 +58,7 @@ public class MensajesMailFacade {
         MensajesMailDAO mensajesMailDAO = new MensajesMailDAO();
         listaMensajes = mensajesMailDAO.getCorreosSinEnviar();
 
-        LOG.info("tamaño de la lista de correos sin enviar: " + listaMensajes.size());
+        LOG.info("Tamaño de la lista de correos sin enviar: " + listaMensajes.size());
 
         if (listaMensajes.size() > 0) {
             //Se envian correos

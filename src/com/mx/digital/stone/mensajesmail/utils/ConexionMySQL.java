@@ -7,7 +7,6 @@ package com.mx.digital.stone.mensajesmail.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-
 import org.apache.log4j.Logger;
 
 /**

@@ -93,6 +93,7 @@ public class MensajesMailFacade {
 
             } catch (Exception e) {
                 //Se actualiza a enviado con error.
+                LOG.error("No se pudo enviar el correo electronico" , e);
                 mensajesMailDAO.actualizaMensajesMail(Constantes.ENVIO_FALLIDO, mensajesMailVO.getIdMensajesMail());
             }
 

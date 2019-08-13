@@ -57,7 +57,7 @@ public class MensajesMailDAO {
 
         try {
             ps = con.prepareStatement(sql);
-            LOG.info(ps);
+            LOG.info("ps: " + ps);
             //System.out.println("ps: " + ps);
             rs = ps.executeQuery();
             while (rs.next()) {
